@@ -1,0 +1,34 @@
+# Jekyll _site/ directory (generated files)
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Bundler dependencies
+vendor/
+.bundle/
+Gemfile.lock
+
+# Node modules (if using npm/yarn for assets)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Log and temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# VSCode settings
+.vscode/
+
+# Files for GitHub Pages (if using remote deployment)
+.env
+.github/
+
+# Ignore compiled assets if using Jekyll's built-in Sass processing
+assets/css/main.css
+assets/css/main.css.map
