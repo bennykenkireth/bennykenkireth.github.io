@@ -1,0 +1,28 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+search: false
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+
+$garamond :  "Minion Pro Caption", minion-pro-caption, "Minion Pro", "Garamond Premier Pro Caption", "Garamond Premier Pro", "Hoefler Text", Constantia, Garamond, Palatino, "Palatino Linotype", Baskerville, "Book Antiqua", Georgia, "Century Schoolbook L", serif;
+
+
+
+
+
+
+.page__lead{
+    font-family: $garamond;
+
+}
+
+.page__content{
+    font-family: $garamond;
+
+}
+

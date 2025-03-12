@@ -1,0 +1,859 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Euler’s Theorem - bgkiitg.github.io</title>
+<meta name="description" content="Euler’s theorem is a simple theorem from graph theory. If states that if \(G\) is a planar graph with \(v\) vertices and \(e\) edges and \(f\) faces, then">
+
+
+  <meta name="author" content="Benny George Kenkireth">
+  
+  <meta property="article:author" content="Benny George Kenkireth">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="bgkiitg.github.io">
+<meta property="og:title" content="Euler’s Theorem">
+<meta property="og:url" content="http://localhost:4000/blog/Euler/">
+
+
+  <meta property="og:description" content="Euler’s theorem is a simple theorem from graph theory. If states that if \(G\) is a planar graph with \(v\) vertices and \(e\) edges and \(f\) faces, then">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2025-01-16T00:00:00+05:30">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/blog/Euler/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="bgkiitg.github.io Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          bgkiitg.github.io
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/posts/"
+                
+                
+              >Blog</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about/"
+                
+                
+              >About</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/research/"
+                
+                
+              >Research</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/teaching/"
+                
+                
+              >Teaching</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="/assets/images/ben.jpeg" alt="Benny George Kenkireth" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Benny George Kenkireth</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>All that I imagine as interesting</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="https://bgkiitg.github.io/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Website</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/bgkiitg" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/benny-george-kenkireth-50400448/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i><span class="label"> LinkedIn</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Euler’s Theorem">
+    <meta itemprop="description" content="Euler’s theorem is a simple theorem from graph theory. If states that if \(G\) is a planar graph with \(v\) vertices and \(e\) edges and \(f\) faces, then">
+    <meta itemprop="datePublished" content="2025-01-16T00:00:00+05:30">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/blog/Euler/" itemprop="url">Euler’s Theorem
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>Euler’s theorem is a simple theorem from graph theory. If states that if \(G\) is a planar graph with \(v\) vertices and \(e\) edges and \(f\) faces, then</p>
+
+\[v-e+f =2\]
+
+<p>There is a simple inductive proof. We will see a “topological” proof  of this result.</p>
+
+<h2 id="key-proof-steps">Key proof steps</h2>
+<ul>
+  <li>Define polyhedrons.</li>
+  <li>Choose any tree \(T\) on the “polyhedron”</li>
+  <li>Consider the “dual” tree \(\Gamma\) of the tree \(T\).</li>
+  <li>As \(\Gamma\) and \(T\) are both trees, we have \(v_{G}-e_{G}\) =1.</li>
+  <li>Adding these equations, we have Euler’s Theorem.</li>
+</ul>
+
+<h4 id="polyhedron">Polyhedron</h4>
+
+<p>Intuitively, polyhedrons must look like objects shown below.</p>
+<hr />
+
+<div style="text-align: center;">
+<script type="text/tikz">
+
+\begin{tikzpicture}
+  \begin{scope}
+    
+
+\coordinate (A1) at (0,0);
+\coordinate (A2) at (3,0);
+\coordinate (A3) at (5,1.5);
+\coordinate (A4) at (2,1.5);
+
+\coordinate (B1) at (-1,2);
+\coordinate (B2) at (2.5,2);
+\coordinate (B3) at (4,2.75);
+\coordinate (B4) at (5,3.5);
+\coordinate (B5) at (1,3.5);
+
+\coordinate (C) at (3,1);
+
+
+\draw (A1) -- (A2) -- (A3);
+\draw[dashed] (A3) -- (A4)--(A1);
+\draw (B2)--  (B1) -- (B5) -- (B4) -- (B3);
+\draw (A2) -- (C) -- (B2) --(B3) --(C);
+\draw (A1) -- (B1);
+\draw (A3) -- (B4);
+\draw[dashed] (A4) -- (B5);
+  \end{scope}
+  \begin{scope}[xshift=7cm,scale=0.5]
+
+  \coordinate (C1) at (4,0);
+  \coordinate (C2) at (7,0);
+  \coordinate (C3) at (9,2);
+  \coordinate (C4) at (5.5,4);
+  \coordinate (C5) at (2,2);
+  \draw (C5)--(C1)--(C2)--(C3);
+  \draw[dashed] (C3) --(C4)--(C5);
+
+  
+  \coordinate (D1) at (4,6);
+  \coordinate (D2) at (7,6);
+  \coordinate (D3) at (9,8);
+  \coordinate (D4) at (5.5,10);
+  \coordinate (D5) at (2,8);
+  \draw (D1)--(D2)--(D3)--(D4)--(D5)--cycle;
+
+
+  \draw (C1) --(D1);
+  \draw (C2) --(D2);
+  \draw (C3) --(D3);
+  \draw (C5) --(D5);
+  \draw[dashed] (C4)--(D4);
+
+  \coordinate (E1) at (5,7);
+  \coordinate (E2) at (6,7);
+  \coordinate (E3) at (6.75,8);
+  \coordinate (E4) at (5.5,8.5);
+  \coordinate (E5) at (4.25,8);
+
+  \draw (E1)--(E2)--(E3)--(E4)--(E5)--cycle;
+
+  \coordinate (F1) at (5,6.5);
+  \coordinate (F2) at (6,6.5);
+  \coordinate (F3) at (6.75,7.5);
+  \coordinate (F4) at (5.5,8);
+  \coordinate (F5) at (4.25,7.5);
+
+  \draw[dashed] (F1)--(F2)--(F3)--(F4)--(F5)--cycle;
+  \draw[dashed] (E1)--(F1);
+  \draw[dashed] (E2)--(F2);
+  \draw[dashed] (E3)--(F3);
+  \draw[dashed] (E4)--(F4);
+  \draw[dashed] (E5)--(F5);
+
+  \fill[blue!40!white, opacity=0.6] (E1) -- (F1) -- (F2) -- (E2) -- cycle;
+  \fill[blue!40!white,opacity=0.6] (E2) -- (F2) -- (F3) -- (E3) -- cycle;
+  \fill[blue!40!white,opacity=0.6] (E3) -- (F3) -- (F4) -- (E4) -- cycle;
+  \fill[blue!40!white,opacity=0.6] (E4) -- (F4) -- (F5) -- (E5) -- cycle;
+  \fill[blue!40!white,opacity=0.6] (E5) -- (F5) -- (F1) -- (E1) -- cycle;
+
+\end{scope}
+\end{tikzpicture}
+
+</script>
+</div>
+<hr />
+
+<p>What is not a polyhedra looks like the objects shown below.  One of them has a  “cavity”  and the other has a  “hole”   through it.</p>
+
+<hr />
+
+<div style="text-align: center;">
+
+<script type="text/tikz">
+\begin{tikzpicture}
+\begin{scope}
+% Define the vertices of the outer cube
+\coordinate (A) at (0,0,0); % Front-bottom-left
+\coordinate (B) at (3,0,0); % Front-bottom-right
+\coordinate (C) at (3,3,0); % Front-top-right
+\coordinate (D) at (0,3,0); % Front-top-left
+\coordinate (E) at (0,0,-3); % Back-bottom-left
+\coordinate (F) at (3,0,-3); % Back-bottom-right
+\coordinate (G) at (3,3,-3); % Back-top-right
+\coordinate (H) at (0,3,-3); % Back-top-left
+
+% Define the vertices of the inner cavity (smaller cube)
+\coordinate (A1) at (1,1,-1); % Front-bottom-left
+\coordinate (B1) at (2,1,-1); % Front-bottom-right
+\coordinate (C1) at (2,2,-1); % Front-top-right
+\coordinate (D1) at (1,2,-1); % Front-top-left
+\coordinate (E1) at (1,1,-2); % Back-bottom-left
+\coordinate (F1) at (2,1,-2); % Back-bottom-right
+\coordinate (G1) at (2,2,-2); % Back-top-right
+\coordinate (H1) at (1,2,-2); % Back-top-left
+
+% Draw the outer cube
+\fill[blue!20!white] (A) -- (B) -- (C) -- (D) -- cycle; % Front face
+\fill[blue!25!white] (E) -- (F) -- (G) -- (H) -- cycle; % Back face
+\fill[blue!30!white] (A) -- (B) -- (F) -- (E) -- cycle; % Bottom face
+\fill[blue!35!white] (D) -- (C) -- (G) -- (H) -- cycle; % Top face
+\fill[blue!40!white] (B) -- (C) -- (G) -- (F) -- cycle; % Right face
+\fill[blue!45!white] (A) -- (D) -- (H) -- (E) -- cycle; % Left face
+
+% Draw the inner cavity (hole)
+\fill[white] (A1) -- (B1) -- (C1) -- (D1) -- cycle; % Front face
+\fill[white] (E1) -- (F1) -- (G1) -- (H1) -- cycle; % Back face
+\fill[white] (A1) -- (B1) -- (F1) -- (E1) -- cycle; % Bottom face
+\fill[white] (D1) -- (C1) -- (G1) -- (H1) -- cycle; % Top face
+\fill[white] (B1) -- (C1) -- (G1) -- (F1) -- cycle; % Right face
+\fill[white] (A1) -- (D1) -- (H1) -- (E1) -- cycle; % Left face
+
+% Draw edges of the outer cube
+\draw[thick] (A) -- (B) -- (C) -- (D) -- cycle; % Front face
+\draw[thick] (E) -- (F) -- (G) -- (H) -- cycle; % Back face
+\draw[thick] (A) -- (E);
+\draw[thick] (B) -- (F);
+\draw[thick] (C) -- (G);
+\draw[thick] (D) -- (H);
+
+% Draw edges of the inner cavity
+\draw[thick, dashed] (A1) -- (B1) -- (C1) -- (D1) -- cycle; % Front face
+\draw[thick, dashed] (E1) -- (F1) -- (G1) -- (H1) -- cycle; % Back face
+\draw[thick, dashed] (A1) -- (E1);
+\draw[thick, dashed] (B1) -- (F1);
+\draw[thick, dashed] (C1) -- (G1);
+\draw[thick, dashed] (D1) -- (H1);
+\end{scope}
+
+\begin{scope}[xshift = 10cm,scale=0.6]
+  \coordinate (A1) at (0,0);
+  \coordinate (A2) at (3,0);
+  \coordinate (A3) at (4,2);
+  \coordinate (A4) at (1,2);
+  \draw (A1)--(A2)--(A3)--(A4)--cycle;
+  \coordinate (B1) at (0,5);
+  \coordinate (B2) at (3,5);
+  \coordinate (B3) at (4,7);
+  \coordinate (B4) at (1,7);
+  \draw (B1)--(B2)--(B3)--(B4)--cycle;
+  \draw (A1) -- (B1);
+  \draw (A2) -- (B2);
+  \draw (A3) -- (B3);
+  \draw[dashed] (A4) -- (B4);
+
+  \coordinate (C1) at (1.50,0.75);
+  \coordinate (C2) at (2.25,0.75);
+  \coordinate (C3) at (2.50,1.25);
+  \coordinate (C4) at (1.75,1.25);
+  \draw (C1)--(C2)--(C3)--(C4)--cycle;
+
+  \coordinate (D1) at (1.50,5.75);
+  \coordinate (D2) at (2.25,5.75);
+  \coordinate (D3) at (2.50,6.25);
+  \coordinate (D4) at (1.75,6.25);
+  \draw (D1)--(D2)--(D3)--(D4)--cycle;
+  \draw[dashed] (C1) -- (D1);
+  \draw[dashed] (C2) -- (D2);
+  \draw[dashed] (C3) -- (D3);
+  \draw[dashed] (C4) -- (D4);
+  \fill[blue!40!white,opacity=0.6] (C1) -- (D1) -- (D2) -- (C2) -- cycle;
+  \fill[blue!40!white,opacity=0.6] (C2) -- (D2) -- (D3) -- (C3) -- cycle;
+  \fill[blue!40!white,opacity=0.6] (C3) -- (D3) -- (D4) -- (C4) -- cycle;
+  \fill[blue!40!white,opacity=0.6] (C4) -- (D4) -- (D1) -- (C1) -- cycle;
+  
+\end{scope}
+
+\end{tikzpicture}
+</script>
+</div>
+<hr />
+
+<dl>
+  <dt>We will define  what constitutes a polyhedron in the context of Euler’s Theorem.</dt>
+  <dt>Polyhedron</dt>
+  <dd>A polyhedron is a finite collection of plane polygons such that
+    <ul>
+      <li>if two polygons intersect, there do so along an edge or a vertex and each edge is shared by exactly two poolygons.</li>
+      <li>The polygons which share a vertex can be arranged cyclically such that the adjacent polygons along the cycle has a common edge.</li>
+    </ul>
+  </dd>
+</dl>
+
+<h1 id="eulers-theorem"><strong>Euler’s Theorem</strong></h1>
+
+<p>Let  <em>P</em> be a connected  polyhedron  such that any loop on <em>P</em> separates <em>P</em>
+into two pieces. Then, \(v-e+f =2\).</p>
+
+<p><strong>Proof:</strong></p>
+
+<p>Take any tree  \(T_{1}\) on the polyhedron. We will define a dual of this tree, namely \(T_{2}\). The vertices in the dual are faces(plane polygons) of the polyhedron. Two vertices have an edge between them if the corresponding faces share an edge that does not belong to \(T_{1}\). Note that \(v(T_{1}) - e(T_{1}) = 1\) and that \(v(T_{2}) - e(T_{2})= 1\). Note that \(v(T_{1}) = v\) and
+ \(v(T_{2}) = f\) and \(e(T_{1}) + e(T_{2}) = e\).</p>
+
+<h3 id="references">References</h3>
+
+<ol>
+  <li>Armstrong, M.A., <em>Basic Topology</em>, Springer UTM  2013</li>
+</ol>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#blog" class="page__taxonomy-item p-category" rel="tag">Blog</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-01-16T00:00:00+05:30">January 16, 2025</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  <h4 class="page__share-title">Share on</h4>
+
+  <a href="https://twitter.com/intent/tweet?text=Euler%27s+Theorem%20http%3A%2F%2Flocalhost%3A4000%2Fblog%2FEuler%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fblog%2FEuler%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/blog/Euler/" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/blog/tikzjax/" class="pagination--pager" title="A post with TikZJax">Previous</a>
+    
+    
+      <a href="/blog/bookmarks/" class="pagination--pager" title="Bookmarks">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    
+<div class="page__related">
+  
+  <h2 class="page__related-title">You May Also Enjoy</h2>
+  <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/statisticallearning/" rel="permalink">Statistical Learning
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">What really is a learning problem from a statistical point of view?
+
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/riskneutralprices/" rel="permalink">Risk Neutral Pricing and Martingales
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">The relationship betweek risk neutral pricing and discounted wealth processes in the binomial asset pricing model.
+
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/bookmarks/" rel="permalink">Bookmarks
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This page contains a list of internet bookmarks
+
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/tikzjax/" rel="permalink">A post with TikZJax
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is an example post with TikZ code. TikZJax converts script tags (containing TikZ code) into SVGs.
+
+</p>
+  </article>
+</div>
+
+    
+  </div>
+</div>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/bgkiitg" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/benny-george-kenkireth-50400448/" rel="nofollow noopener noreferrer"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>  LinkedIn</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 <a href="http://localhost:4000">bgkiitg.github.io</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+    
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+    
+
+<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+
+  </body>
+</html>

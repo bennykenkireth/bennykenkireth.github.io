@@ -1,0 +1,721 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Statistical Learning - bgkiitg.github.io</title>
+<meta name="description" content="What really is a learning problem from a statistical point of view?">
+
+
+  <meta name="author" content="Benny George Kenkireth">
+  
+  <meta property="article:author" content="Benny George Kenkireth">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="bgkiitg.github.io">
+<meta property="og:title" content="Statistical Learning">
+<meta property="og:url" content="http://localhost:4000/blog/statisticallearning/">
+
+
+  <meta property="og:description" content="What really is a learning problem from a statistical point of view?">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2025-03-04T00:00:00+05:30">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/blog/statisticallearning/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="bgkiitg.github.io Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          bgkiitg.github.io
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/posts/"
+                
+                
+              >Blog</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about/"
+                
+                
+              >About</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/research/"
+                
+                
+              >Research</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/teaching/"
+                
+                
+              >Teaching</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="/assets/images/ben.jpeg" alt="Benny George Kenkireth" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Benny George Kenkireth</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>All that I imagine as interesting</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="https://bgkiitg.github.io/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Website</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/bgkiitg" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/benny-george-kenkireth-50400448/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i><span class="label"> LinkedIn</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Statistical Learning">
+    <meta itemprop="description" content="What really is a learning problem from a statistical point of view?">
+    <meta itemprop="datePublished" content="2025-03-04T00:00:00+05:30">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/blog/statisticallearning/" itemprop="url">Statistical Learning
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>What really is a learning problem from a statistical point of view?</p>
+
+<p><br />
+Consider the function \(f(x)= x+ 2x^3\). The python code  given below samples this function
+10000 times from the range \([-2,2]\). The sampled value at \(x\) is not exactly \(f(x)\) but has a “noise” which is a normally distributed random variable with mean 0 and variance 1.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">**</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># Generate 10000 x values in the range [-2, 2]
+</span><span class="n">x_values</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span>
+<span class="n">y_values</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x_values</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span>
+
+<span class="c1"># Plot the points
+</span><span class="n">plt</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_values</span><span class="p">,</span> <span class="n">y_values</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">"Noisy Data"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">"x values"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">"y values"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">"Scatter Plot of Sampled Points"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Print the first 10 points as a sample
+</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Point on the curve: (x=</span><span class="si">{</span><span class="n">x_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="p">.</span><span class="mi">4</span><span class="n">f</span><span class="si">}</span><span class="s">, y=</span><span class="si">{</span><span class="n">y_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="p">.</span><span class="mi">4</span><span class="n">f</span><span class="si">}</span><span class="s">)"</span><span class="p">)</span></code></pre></figure>
+
+<p>The scatter plot of the data generated by this program is shown below.</p>
+
+<p><img src="/assets/images/Figure_1.png" alt="Scatter Plot" class="center-image" /></p>
+
+<p>The statistical learning problem is :</p>
+
+<p>Given just this scatter plot(data) , can you guess what the underlying function was?</p>
+
+<p>With this data, can you deduce that the  \(f(x)= x+ 2x^3\).  How much data do you need to make  this inference? If another person generated data using the same program, does her data also, when analysed give us the conclusion that the underlying function was  \(f(x)= x+ 2x^3\)?</p>
+
+<p>In many real life situations, we just have the data. We do not know that the data was generated by a python code or some deterministic process plus some randomness. We abstract all these uncertainities to randomness and hope to recover the “true” function \(f\) from the data.</p>
+
+<p>Formally, \(Y\) or the output variable or the dependent variable or the response is a random variable that has the following form</p>
+
+\[Y = f(X) + \epsilon\]
+
+<p>where \(f\) is an unknown but fixed function and \(\epsilon\) is a random variable with mean 0 and \(X\) is a vector of predictors or input variables. Note that the random variable \(Y\) is defined on the same probability space as the random variable \(\epsilon\). Further there is no randomness as such in \(X\). More precisely, \(Y(X)\) is a random variable for each \(X\)</p>
+
+<p>We are given a bunch of \(Y\) samples and the corresponding \(X\) and are asked to guess what is \(f\). We may use this data and use statistical learning teachniques and come up with suitable choices for \(f\). Let’s denote this estimate function as \(\hat{f}\). We may use this to predict \(Y\) at a point \(X\) as \(\hat{f}(X)\). The closer \(\hat{f}\). is to \(f\), our estimation will be better. But even if we knew exactly what \(f\) there is be error as \(Y\) has a component from \(\epsilon\).</p>
+
+<p>Even if we knew exactly the process, most often we do not know, that generated the data, \(Y\) is a random variable and thus will have a variance. Given \(\hat{f}\) and \(X\), our prediction will be  \(\hat{f}(X)\).  Then we have the following:</p>
+
+\[E(Y - \hat{Y})^2 = E\left[ f(X) + \epsilon - \hat{f}(X) \right]^2
+
+
+
+= \underbrace{[f(X) - \hat{f}(X)]^2}_{\text{Reducible}} + \underbrace{\operatorname{Var}(\epsilon)}_{\text{Irreducible}}\]
+
+<p>The first error term is called reducible because it can be reduced by giving a better \(\hat{f}\). We can’t do that for the irreducible component.</p>
+
+<p>Knowing the exat form of  \(f\) also helps us draw conclusions of the following kind:</p>
+
+<ul>
+  <li>Which input predictors are  important?</li>
+  <li>Which input predict causes maximum change?</li>
+  <li>For a given improvement in output, huch much should a certain predictor change?</li>
+</ul>
+
+<p>These questions are considered as “inference” related rather than  the predictor kind.</p>
+
+<p>Now consider the problem of determining \(\hat{f}\). There are broadly two approaches:</p>
+
+<ul>
+  <li>Parametric</li>
+</ul>
+
+<p>Here we may assume that \(f\) have a certain shape, say linear, and then estimates the parameter using the data
+ using methods like OLS etc.</p>
+
+<ul>
+  <li>Non-parametric methods</li>
+</ul>
+
+<p>Here we just try to get as close a fit as possible without being restricted by say the shape. An example would be A thin-plate spline method. These approaches allow for a much wide collection of shapes. We choose a smoothness and then try to find a function satisyfying the smoothness criteria.</p>
+
+<p>Here is a list of statistical learning methods. The flexibility goes up  as we go down the list but the interpretability goes down as flexibility goes up.</p>
+
+<ol>
+  <li>Subset selection</li>
+  <li>Lasso</li>
+  <li>Least squares</li>
+  <li>Generalized Additive models</li>
+  <li>Trees</li>
+  <li>Bagging, Boosting</li>
+  <li>SVM</li>
+  <li>Deep Learning</li>
+</ol>
+
+<p>The approaches may be classified as supervsed or Unsupervised on semisupervised on the basis of the type of data we have.
+Further, on the basis of the values that \(Y\) can take, we may think of the problem as being classification or regression.</p>
+
+<p>Once we have computed \(\hat{f}\), the quality of the fit can be quantified by computing the Mean Squared  Error on a test set. The  MSE on a test with \(n\) sample points  is given by</p>
+
+\[MSE= \displaystyle \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{f}(x_i))^2\]
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#blog" class="page__taxonomy-item p-category" rel="tag">Blog</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-03-04T00:00:00+05:30">March 4, 2025</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  <h4 class="page__share-title">Share on</h4>
+
+  <a href="https://twitter.com/intent/tweet?text=Statistical+Learning%20http%3A%2F%2Flocalhost%3A4000%2Fblog%2Fstatisticallearning%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fblog%2Fstatisticallearning%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/blog/statisticallearning/" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/blog/riskneutralprices/" class="pagination--pager" title="Risk Neutral Pricing and Martingales">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    
+<div class="page__related">
+  
+  <h2 class="page__related-title">You May Also Enjoy</h2>
+  <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/riskneutralprices/" rel="permalink">Risk Neutral Pricing and Martingales
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">The relationship betweek risk neutral pricing and discounted wealth processes in the binomial asset pricing model.
+
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/bookmarks/" rel="permalink">Bookmarks
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This page contains a list of internet bookmarks
+
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/Euler/" rel="permalink">Euler’s Theorem
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Euler’s theorem is a simple theorem from graph theory. If states that if \(G\) is a planar graph with \(v\) vertices and \(e\) edges and \(f\) faces, then
+
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/tikzjax/" rel="permalink">A post with TikZJax
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is an example post with TikZ code. TikZJax converts script tags (containing TikZ code) into SVGs.
+
+</p>
+  </article>
+</div>
+
+    
+  </div>
+</div>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/bgkiitg" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/benny-george-kenkireth-50400448/" rel="nofollow noopener noreferrer"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>  LinkedIn</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 <a href="http://localhost:4000">bgkiitg.github.io</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+    
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+    
+
+<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+
+  </body>
+</html>
