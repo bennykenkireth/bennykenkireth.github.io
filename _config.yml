@@ -69,10 +69,10 @@ author:
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://bgkiitg.github.io/"
+      url: "https://bennykenkireth.github.io/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/bgkiitg"
+      url: "https://github.com/bennykenkireth"
     - label: " LinkedIn"
       icon: "fa-brands fa-linkedin-in"
       url: "https://www.linkedin.com/in/benny-george-kenkireth-50400448/"
@@ -81,7 +81,7 @@ footer:
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/bgkiitg"
+      url: "https://github.com/bennykenkireth"
     - label: " LinkedIn"
       icon: "fa-brands fa-linkedin-in"
       url: "https://www.linkedin.com/in/benny-george-kenkireth-50400448/"
