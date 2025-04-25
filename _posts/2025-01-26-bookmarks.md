@@ -16,3 +16,5 @@ This page contains a list of internet bookmarks
 [Getting started with Anaconda and Python on a Mac](https://www.youtube.com/watch?v=V4riykgUS94)
 
 [Push to Github from Terminal](https://www.youtube.com/watch?v=bvi37IbJXS4)
+
+[Org-mode Playlist](https://www.youtube.com/playlist?list=PLVtKhBrRV_ZkPnBtt_TD1Cs9PJlU0IIdE)
