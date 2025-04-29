@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f4f4f4;
+    }
+    .container {
+      width: 100%;
+      max-width: 800px;
+      padding: 2rem;
+      background: white;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      margin: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+    }
+    th, td {
+      padding: 8px;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+    th {
+      background-color: #f7f7f7;
+    }
+    .qr-container {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .qr-container img {
+      width: 150px;
+      height: 150px;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>{{ page.title }}</h1>
+    <div id="reward-summary">Loading...</div>
+<div class="qr-container">
+  <div style="text-align: center;">
+    <img src="/assets/images/achu.jpg" alt="QR Code 1">
+    <p>Archie</p> <!-- Name below QR code -->
+  </div>
+  <div style="text-align: center;">
+    <img src="/assets/images/vava.jpg" alt="QR Code 2">
+    <p>Kitty</p> <!-- Name below QR code -->
+  </div>
+  <div style="text-align: center;">
+    <img src="/assets/images/kuttu.jpg" alt="QR Code 3">
+    <p>Valky</p> <!-- Name below QR code -->
+  </div>
+</div>
+
+  <script>
+    const sheetURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTJY6p10CqVZlZC-dhcZLTF7nBBujO3Wu5HhkFUWuTR3o-04x6rK3JABnVEHyzEHKL7vLVhgRJCr_Nt/pub?output=csv";
+
+    async function loadRewards() {
+      const response = await fetch(sheetURL);
+      const data = await response.text();
+      const rows = data.split("\n").slice(1);
+      const rewards = {};
+
+      rows.forEach(row => {
+        const cols = row.split(",");
+        const name = cols[1]?.trim();
+        const amount = parseFloat(cols[2]) || 0;
+        if (name) {
+          rewards[name] = (rewards[name] || 0) + amount;
+        }
+      });
+
+      let html = `
+        <table>
+          <thead><tr><th>Name</th><th>Points</th></tr></thead><tbody>
+      `;
+      for (const [name, total] of Object.entries(rewards)) {
+        html += `<tr><td>${name}</td><td>${total.toFixed(2)}</td></tr>`;
+      }
+      html += "</tbody></table>";
+      document.getElementById("reward-summary").innerHTML = html;
+    }
+
+    document.addEventListener('DOMContentLoaded', loadRewards);
+  </script>
+
+</body>
+</html>
